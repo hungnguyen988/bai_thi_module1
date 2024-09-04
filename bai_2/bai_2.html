@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function thanThiet(a, b) {
+        let ketQua = false;
+        let tongUoc = 0;
+        if (a > b) {
+            for (let i = 1; i <= a / 2; i++) {
+                if (a % i === 0) {
+                    tongUoc += i;
+                }
+            }
+            if (tongUoc == b) {
+                ketQua = true;
+            }
+        } else {
+            for (let i = 1; i <= b / 2; i++) {
+                if (b % i === 0) {
+                    tongUoc += i;
+                }
+            }
+            if (tongUoc == a) {
+                ketQua = true;
+            }
+        }
+        return ketQua;
+    }
+    alert(thanThiet(123, 284));
+</script>
+</body>
+</html>

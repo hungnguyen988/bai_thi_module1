@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    do {
+        n = prompt("nhập độ dài mảng n :");
+    } while (parseInt(n) != n || n <= 0 || n > 50)
+    let mang = [];
+    for (let i = 0; i < n; i++) {
+        let phanTu = parseInt(prompt("nhập phần tử thứ  " + i));
+        mang.push(phanTu);
+    }
+    alert(mang);
+    let tong = 0;
+    let dem = 0;
+    for (let i = 0; i < mang.length; i++) {
+        if (i % 2 === 0 && mang[i] % 2 !== 0) {
+            tong += mang[i];
+            dem++;
+        }
+    }
+    let ketQua = tong / dem;
+    alert("kết quả là :" + ketQua)
+</script>
+</body>
+</html>
